@@ -122,7 +122,7 @@ const WORKS = [
     "client": "Stazis",
     "year": "2026",
     "cat": "presentation",
-    "cover": "images/stazis/oblozhka6.png",
+    "cover": "images/Stazis/oblozhka6.png",
     "task": "Продуктовый гайд и презентация по мерчандайзингу",
     "brief": "Презентационные материалы для бренда чехлов.",
     "done": [
@@ -164,7 +164,7 @@ const WORKS = [
     "client": "Тинькофф",
     "year": "2024",
     "cat": "presentation",
-    "cover": "images/tbank/oblozhka8.png",
+    "cover": "images/Tbank/oblozhka8.png",
     "task": "Дизайн презентации",
     "brief": "Разработать презентацию кредитной карты Тинькофф Платинум, которая понятно объясняет условия и преимущества продукта в цифровом формате.",
     "done": [
@@ -289,7 +289,7 @@ const WORKS = [
     "client": "Мими",
     "year": "2026",
     "cat": "print",
-    "cover": "images/mimi/oblozhka13.png",
+    "cover": "images/Mimi/oblozhka13.png",
     "task": "Афиша для ресторана, формат А1",
     "brief": "Плакат для размещения внутри ресторана грузинской кухни, анонс праздника урожая. Нужно было уйти от прошлогоднего макета и фирменной сетки, но сохранить фирменную палитру и обязательную информацию.",
     "done": [
