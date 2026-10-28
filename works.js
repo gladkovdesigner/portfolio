@@ -101,7 +101,7 @@ const WORKS = [
     "client": "LikeStore",
     "year": "2026",
     "cat": "brand",
-    "cover": "images/brend/oblozhka5.png",
+    "cover": "images/Brend/oblozhka5.png",
     "task": "Обновление брендбука LikeStore",
     "brief": "Обновить визуальный стиль LikeStore, сохранив узнаваемость бренда и приблизив его к эстетике Apple. Нужно было сделать дизайн более лёгким, современным и человечным, при этом сохранить логотип и фирменный бирюзовый цвет.",
     "done": [
