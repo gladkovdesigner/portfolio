@@ -122,7 +122,7 @@ const WORKS = [
     "client": "Stazis",
     "year": "2026",
     "cat": "presentation",
-    "cover": "images/Stazis/oblozhka6.png",
+    "cover": "images/Stazis/Oblozhka6.png",
     "task": "Продуктовый гайд и презентация по мерчандайзингу",
     "brief": "Презентационные материалы для бренда чехлов.",
     "done": [
@@ -135,7 +135,7 @@ const WORKS = [
       "Структура"
     ],
     "ratio": "4/3",
-    "images": [{src:"images/stazis/1.jpg", caption:"Дизайн презентаций для Stazis"}],
+    "images": [{src:"images/Stazis/1.jpg", caption:"Дизайн презентаций для Stazis"}],
     "color": "linear-gradient(135deg,#4a1942,#c1666b)"
   },
   {
@@ -156,7 +156,7 @@ const WORKS = [
       "E-commerce"
     ],
     "ratio": "4/3",
-    "images": [{src:"images/vprok/vprok.png", caption:"Учебный проект"}],
+    "images": [{src:"images/vprok/Vprok.png", caption:"Учебный проект"}],
     "color": "linear-gradient(135deg,#1a7431,#95d5b2)"
   },
   {
@@ -260,7 +260,7 @@ const WORKS = [
       "UX-копирайтинг"
     ],
     "ratio": "4/3",
-    "images": [{src:"images/Qiwi/qiwi.png", caption:"Одностраничный сайт для продукта Qiwi"}],
+    "images": [{src:"images/Qiwi/Qiwi.png", caption:"Одностраничный сайт для продукта Qiwi"}],
     "color": "linear-gradient(135deg,#7b2cbf,#e0aaff)"
   },
 {
@@ -301,8 +301,8 @@ const WORKS = [
     "tags": ["Афиша", "Коллаж", "Фотостиль"],
     "ratio": "4/3",
     "images": [
-      {src:"images/mimi/Mimi.png", caption:"Афиша «Праздник урожая», А1"},
-      {src:"images/mimi/visualizatsiya.png", caption:"Визуализация в интерьере ресторана"}
+      {src:"images/Mimi/Mimi.png", caption:"Афиша «Праздник урожая», А1"},
+      {src:"images/Mimi/visualizatsiya.png", caption:"Визуализация в интерьере ресторана"}
     ],
     "color": "linear-gradient(135deg,#3f6b5e,#e8dcc4)"
   },
