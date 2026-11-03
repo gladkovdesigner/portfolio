@@ -122,7 +122,7 @@ const WORKS = [
     "client": "Stazis",
     "year": "2026",
     "cat": "presentation",
-    "cover": "images/stazis/oblozhka6.png",
+    "cover": "images/stazis/Oblozhka6.png",
     "task": "Продуктовый гайд и презентация по мерчандайзингу",
     "brief": "Презентационные материалы для бренда чехлов.",
     "done": [
