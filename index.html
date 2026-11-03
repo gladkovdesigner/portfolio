@@ -203,6 +203,44 @@
       menuButton.setAttribute('aria-label','Открыть меню');
     }));
 
+    // В GitHub Pages путь к файлам чувствителен к регистру букв.
+    // Проверяем обе версии имени папки, не меняя исходный works.js.
+    function imagePathCandidates(path) {
+      const original=String(path || '');
+      const parts=original.split('/');
+      if(parts.length<3 || parts[0]!=='images') return [original];
+      const directory=parts[1];
+      const variants=[directory,
+        directory[0].toUpperCase()+directory.slice(1),
+        directory.toLowerCase(),
+        directory.toUpperCase()
+      ];
+      // Несколько частых вариантов в названиях папок проектов.
+      const aliases={tbank:['TBank','Tbank'],stazis:['Stazis'],brend:['Brend'],mimi:['Mimi']};
+      variants.push(...(aliases[directory.toLowerCase()] || []));
+      return [...new Set(variants)].map(dir => ['images',dir,...parts.slice(2)].join('/'));
+    }
+    function recoverImage(img, originalPath, onMissing) {
+      const candidates=imagePathCandidates(originalPath);
+      let attempt=0;
+      img.addEventListener('error', () => {
+        attempt++;
+        if(attempt<candidates.length) {
+          img.src=candidates[attempt];
+        } else {
+          console.warn('Не найден файл изображения на GitHub Pages:',originalPath,
+            'Проверены пути:',candidates.join(', '));
+          if(onMissing) onMissing();
+        }
+      });
+    }
+    function coverMissingFallback(img, work) {
+      const placeholder=document.createElement('span');
+      placeholder.className='case-placeholder';
+      placeholder.style.background=work.color || '#e4e4e1';
+      placeholder.textContent=work.title;
+      img.replaceWith(placeholder);
+    }
     function filesLabel(count) {
       const x=count%10, y=count%100;
       const form = x===1 && y!==11 ? 'файл' : x>=2 && x<=4 && (y<12||y>14) ? 'файла' : 'файлов';
@@ -226,6 +264,8 @@
           <span class="case-info"><span class="case-index mono">${String(visible).padStart(2,'0')} / ${escapeHTML(work.year)}</span>
           <span class="case-name">${escapeHTML(work.title)}</span>
           <span class="case-sub mono">${escapeHTML(work.client || work.task || '')}${count ? ' · '+filesLabel(count) : ''}</span></span>`;
+        const cover=button.querySelector('.case-thumb img');
+        if(cover) recoverImage(cover,work.cover,()=>coverMissingFallback(cover,work));
         button.addEventListener('click',()=>openProject(index));
         grid.appendChild(button);
       });
@@ -283,6 +323,14 @@
             const thumb=document.createElement('button');thumb.type='button';thumb.className='project-image';
             thumb.setAttribute('aria-label','Увеличить изображение: '+(image.caption || work.title));
             thumb.innerHTML=`<img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.caption || work.title)}" loading="lazy" decoding="async">${image.caption?`<span class="mono">${escapeHTML(image.caption)}</span>`:''}`;
+            const imageElement=thumb.querySelector('img');
+            if(imageElement) recoverImage(imageElement,image.src,()=>{
+              const msg=document.createElement('span');
+              msg.className='image-missing mono';
+              msg.textContent='ФАЙЛ НЕ НАЙДЕН';
+              imageElement.replaceWith(msg);
+              thumb.disabled=true;
+            });
             thumb.addEventListener('click',()=>openImage(imageIndex));
             galleryGrid.appendChild(thumb);
           });
@@ -313,7 +361,14 @@
       const img=$('imageCurrent');
       $('imageViewer').classList.remove('is-tall');
       img.onload=()=>{$('imageViewer').classList.toggle('is-tall',img.naturalHeight>img.naturalWidth*2.4);$('imageViewer').scrollTop=0};
-      img.src=current.src;img.alt=current.caption || currentWork.title;
+      const candidates=imagePathCandidates(current.src);
+      let attempt=0;
+      img.onerror=()=>{
+        attempt++;
+        if(attempt<candidates.length) img.src=candidates[attempt];
+        else console.warn('Файл не найден:',current.src);
+      };
+      img.src=candidates[0];img.alt=current.caption || currentWork.title;
       $('imageCounter').textContent=`${String(currentImageIndex+1).padStart(2,'0')} / ${String(currentImages.length).padStart(2,'0')}`;
       $('imageCaption').textContent=current.caption || '';
       $('imagePrev').hidden=$('imageNext').hidden=currentImages.length<2;

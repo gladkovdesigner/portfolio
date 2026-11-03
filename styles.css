@@ -352,3 +352,6 @@ section[id] {scroll-margin-top:35px}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+
+/* Заглушка только для файлов, которых нет в репозитории GitHub */
+.image-missing{display:flex;aspect-ratio:4/3;align-items:center;justify-content:center;padding:20px;background:#e6e7e2;color:#4f554f;font-size:12px;text-align:center}
