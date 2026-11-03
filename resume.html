@@ -9,21 +9,23 @@
 <meta content="index,follow" name="robots"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="site-header no-print">
-<nav class="nav wrap">
-<a class="logo" href="index.html">Данил<span>.</span>design</a>
-<button aria-expanded="false" aria-label="Меню" class="burger" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html#works">Работы</a></li>
-<li><a href="index.html#services">Услуги и цены</a></li>
-<li><a href="index.html#employers">Работодателям</a></li>
-<li><a href="index.html#about">Обо мне</a></li>
-<li><a class="nav-cta" href="index.html">На главную</a></li>
-</ul>
+<nav class="nav wrap" aria-label="Основная навигация">
+<a class="brand" href="index.html">ДГ<span>®</span></a>
+<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+<div class="nav-links" id="navLinks">
+<a href="index.html#about">Обо мне</a>
+<a href="index.html#skills">Навыки</a>
+<a href="index.html#works">Галерея работ</a>
+<a href="index.html#experience">Опыт</a>
+<a href="index.html#services">Услуги</a>
+<a href="index.html#contact">Контакты</a>
+</div>
+<a class="nav-resume" href="index.html">На главную <span aria-hidden="true">↗</span></a>
 </nav>
 </header>
 <main class="resume">
@@ -36,7 +38,7 @@
 <div class="resume-actions no-print">
 <a class="btn btn-primary btn-sm" href="index.html#works">Смотреть работы</a>
 <a class="btn btn-ghost btn-sm" href="https://t.me/gladkovdesigner" rel="noopener" target="_blank">Написать в Telegram</a>
-<a class="btn btn-ghost btn-sm" href="Files/danil-gladkov-cv.pdf" download="danil-gladkov-cv.pdf">Скачать резюме</a>
+<a class="btn btn-ghost btn-sm" href="files/danil-gladkov-cv.pdf" download="Данил Гладков — резюме.pdf">Скачать резюме</a>
 </div>
 <!-- О СЕБЕ -->
 <div class="resume-block">
@@ -179,5 +181,14 @@
 </nav>
 </div>
 </footer>
+<script>
+  const resumeMenuButton = document.querySelector('.burger');
+  const resumeNavLinks = document.getElementById('navLinks');
+  resumeMenuButton.addEventListener('click', () => {
+    const opened = resumeNavLinks.classList.toggle('open');
+    resumeMenuButton.setAttribute('aria-expanded', String(opened));
+    resumeMenuButton.setAttribute('aria-label', opened ? 'Закрыть меню' : 'Открыть меню');
+  });
+</script>
 </body>
 </html>

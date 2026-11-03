@@ -11,7 +11,7 @@ const WORKS = [
     "done": [
       "Сделал макеты для сайта desktop и адаптацию под mobile версию."
     ],
-    "result": "Макеты начальству понравились и совместно с другими коллегами они приняли дизайн без доработок. После этого я начал адаптацию под Авито и взялся за разработку дизайна для печатных материалов (Тейбл-тент(А4 и А3), также адаптация под соц.сети (Telegram, Zapret.Gram и ВК); ",
+    "result": "Макеты начальству понравились и совместно с другими коллегами они приняли без доработок дизайн. После этого я начал адаптацию под Авито и взялся за разработку дизайна для печатных материалов (Тейбл-тент(А4 и А3), также адаптация под соц.сети (Telegram, Zapret.Gram и ВК); ",
     "tags": [
       "Digital",
       "Адаптив",
@@ -101,7 +101,7 @@ const WORKS = [
     "client": "LikeStore",
     "year": "2026",
     "cat": "brand",
-    "cover": "images/Brend/oblozhka5.png",
+    "cover": "images/brend/oblozhka5.png",
     "task": "Обновление брендбука LikeStore",
     "brief": "Обновить визуальный стиль LikeStore, сохранив узнаваемость бренда и приблизив его к эстетике Apple. Нужно было сделать дизайн более лёгким, современным и человечным, при этом сохранить логотип и фирменный бирюзовый цвет.",
     "done": [
@@ -122,7 +122,7 @@ const WORKS = [
     "client": "Stazis",
     "year": "2026",
     "cat": "presentation",
-    "cover": "images/Stazis/Oblozhka6.png",
+    "cover": "images/stazis/oblozhka6.png",
     "task": "Продуктовый гайд и презентация по мерчандайзингу",
     "brief": "Презентационные материалы для бренда чехлов.",
     "done": [
@@ -135,7 +135,7 @@ const WORKS = [
       "Структура"
     ],
     "ratio": "4/3",
-    "images": [{src:"images/Stazis/1.jpg", caption:"Дизайн презентаций для Stazis"}],
+    "images": [{src:"images/stazis/1.jpg", caption:"Дизайн презентаций для Stazis"}],
     "color": "linear-gradient(135deg,#4a1942,#c1666b)"
   },
   {
@@ -156,7 +156,7 @@ const WORKS = [
       "E-commerce"
     ],
     "ratio": "4/3",
-    "images": [{src:"images/vprok/Vprok.png", caption:"Учебный проект"}],
+    "images": [{src:"images/vprok/vprok.png", caption:"Учебный проект"}],
     "color": "linear-gradient(135deg,#1a7431,#95d5b2)"
   },
   {
@@ -164,7 +164,7 @@ const WORKS = [
     "client": "Тинькофф",
     "year": "2024",
     "cat": "presentation",
-    "cover": "images/Tbank/oblozhka8.png",
+    "cover": "images/tbank/oblozhka8.png",
     "task": "Дизайн презентации",
     "brief": "Разработать презентацию кредитной карты Тинькофф Платинум, которая понятно объясняет условия и преимущества продукта в цифровом формате.",
     "done": [
@@ -260,7 +260,7 @@ const WORKS = [
       "UX-копирайтинг"
     ],
     "ratio": "4/3",
-    "images": [{src:"images/Qiwi/Qiwi.png", caption:"Одностраничный сайт для продукта Qiwi"}],
+    "images": [{src:"images/Qiwi/qiwi.png", caption:"Одностраничный сайт для продукта Qiwi"}],
     "color": "linear-gradient(135deg,#7b2cbf,#e0aaff)"
   },
 {
@@ -289,7 +289,7 @@ const WORKS = [
     "client": "Мими",
     "year": "2026",
     "cat": "print",
-    "cover": "images/Mimi/oblozhka13.png",
+    "cover": "images/mimi/oblozhka13.png",
     "task": "Афиша для ресторана, формат А1",
     "brief": "Плакат для размещения внутри ресторана грузинской кухни, анонс праздника урожая. Нужно было уйти от прошлогоднего макета и фирменной сетки, но сохранить фирменную палитру и обязательную информацию.",
     "done": [
@@ -301,8 +301,8 @@ const WORKS = [
     "tags": ["Афиша", "Коллаж", "Фотостиль"],
     "ratio": "4/3",
     "images": [
-      {src:"images/Mimi/Mimi.png", caption:"Афиша «Праздник урожая», А1"},
-      {src:"images/Mimi/visualizatsiya.png", caption:"Визуализация в интерьере ресторана"}
+      {src:"images/mimi/Mimi.png", caption:"Афиша «Праздник урожая», А1"},
+      {src:"images/mimi/visualizatsiya.png", caption:"Визуализация в интерьере ресторана"}
     ],
     "color": "linear-gradient(135deg,#3f6b5e,#e8dcc4)"
   },
